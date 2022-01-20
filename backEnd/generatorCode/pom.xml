@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.demo</groupId>
-    <artifactId>yeb-generator</artifactId>
+    <artifactId>generatorCode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>yeb-generator</name>
-    <description>yeb-generator</description>
+    <name>generatorCode</name>
+    <description>generatorCode</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

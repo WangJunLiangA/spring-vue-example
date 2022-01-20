@@ -1,26 +1,20 @@
-package com.demo.yebgenerator;
+package com.demo.generatorCode;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
-import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
-import java.util.Collections;
-
-public class YebGeneratorApplication {
+public class generatorCodeApplication {
 
     private static String AUTHOR="Wangjunliang";
 
     private static String DATABASE_URL="jdbc:mysql://localhost:3306/example?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
     private static String DATABASE_USERNAME="root";
     private static String DATABASE_PASSWORD="12345678";
-    private static String OUTPUT_PATH="E:\\Desktop\\smm\\3.SpringBoot_Example\\backEnd\\yeb-server\\src\\main\\java";
-    private static String XML_OUTPUT_PATH="E:\\Desktop\\smm\\3.SpringBoot_Example\\backEnd\\yeb-server\\src\\main\\resources";
+    //文件输出目录记得修改
+    private static String OUTPUT_PATH="E:\\备份文件\\我\\开源项目\\spring-vue-example\\backEnd\\server\\src\\main\\java";
+    private static String XML_OUTPUT_PATH="E:\\备份文件\\我\\开源项目\\spring-vue-example\\backEnd\\server\\src\\main\\resources";
     private static String PACKAGE_PATH="com.demo";
     private static String DATE_FORMAT="yy-MM-dd hh:mm";
     private static String POJO_PACKAGE_NAME="pojo";
