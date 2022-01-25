@@ -2,7 +2,7 @@
  * @Author: WangJunLiang
  * @Date: 2022-01-24 16:37:05 
  * @Last Modified by: WangJunLiang
- * @Last Modified time: 2022-01-24 16:44:05
+ * @Last Modified time: 2022-01-24 18:30:59
  */
 module.exports = {
   
@@ -13,7 +13,7 @@ module.exports = {
     //msTileColor: '#000000', //状态栏颜色
     appleMobileWebAppCapable: 'yes',   //删除默认苹果工具栏 yes or no
     appleMobileWebAppStatusBarStyle: 'default', //导航栏延时 black or default
-    assetsVersion:2, //当前版本
+    assetsVersion:3, //当前版本
     // configure the workbox plugin GenerateSW创建新的serverworker.js   InjectManifest现有的serverworker.js
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
@@ -21,13 +21,13 @@ module.exports = {
       // swSrc: 'dev/sw.js',
     },
     //设置图标
-    /*iconPaths: {
+    iconPaths: {
       favicon32: 'icon.png',
       favicon16: 'icon.png',
       appleTouchIcon: 'icon.png',
       maskIcon: 'icon.png',
-      msTileImage: 'icon.png'
-    }*/
+      msTileImage: 'icon.png',
+    },
     //可在此直接配置manifestOptions
     manifestOptions: {
       name: 'spring-vue-example', //启动页名称
@@ -42,10 +42,15 @@ module.exports = {
       browser 与普通网页在浏览器中打开一致*/
       //start_url:"",//打开页面地址
       //设置图标
-      "icons": [{
+      icons: [{
                   "src": "icon.png",
-                  "sizes": "48x48",
-                 },{
+                  "sizes": "16x16",
+                  "type": "image/png"
+                },{
+                  "src": "icon.png",
+                  "sizes": "32x32",
+                  "type": "image/png"
+                },{
                   "src": "icon.png",
                   "sizes": "48x48",
                   "type": "image/png"

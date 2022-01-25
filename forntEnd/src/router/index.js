@@ -9,21 +9,6 @@ const routes = [{
   name: "login",
   path: "/login",
   component: () => import('../views/login/login.vue'),
-  children:[
-    {
-      path: '',
-      redirect: '/singin'
-    },
-    {
-      name: "singin",
-      path: '/singin',
-      component: () => import('../views/login/singin.vue'),
-      meta: {
-        title: '登录',
-        isVerify:true,
-      }
-    },
-  ],
   meta: {
     title: "登录",
     isVerify: true
