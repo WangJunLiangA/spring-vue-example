@@ -1,9 +1,10 @@
-/*
- * @Author: WangJunLiang 
- * @Date: 2022-01-25 17:35:27 
- * @Last Modified by: WangJunLiang
- * @Last Modified time: 2022-01-25 17:36:48
- */
+<!--
+ * @Description: 登录页面
+ * @Author: JunLiangWang
+ * @Date: 2022-01-20 10:58:58
+ * @LastEditors: JunLiangWang
+ * @LastEditTime: 2022-01-26 16:54:19
+-->
 <!--登录主页-->
 <template>
   <!--全屏页面-->
@@ -25,7 +26,7 @@
   </div>
 </template>
 <script>
-import rotationMap from '@/components/rotationMap.vue'
+import rotationMap from '@/components/rotation-map.vue'
 
 export default {
   name: "login",

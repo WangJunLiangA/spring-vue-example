@@ -3,7 +3,7 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-25 10:06:04
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-26 16:50:57
+ * @LastEditTime: 2022-01-26 16:53:45
 -->
 <template>
   <div class="container">
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "rotationMap",
+  name: "rotation-map",
   props: {
     //图片列表
     dataList: {
