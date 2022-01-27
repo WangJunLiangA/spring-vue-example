@@ -3,7 +3,7 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-25 10:06:04
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-26 16:53:45
+ * @LastEditTime: 2022-01-27 16:13:19
 -->
 <template>
   <div class="container">
@@ -36,20 +36,30 @@ export default {
       type: Array,
       default: () => [
         {
-          imgUrl: require("@/assets/img/1.jpg"), //图片地址
-          linkUrl: "https:www.baidu.com", //点击链接
-          details: "测试图片", //图片描述
+          linkUrl:"https://www.baidu.com",
+          imgUrl:require("@/assets/img/1.svg"),
+          details:""
         },
         {
-          imgUrl: require("@/assets/img/2.jpg"), //图片地址
-          linkUrl: "https:www.baidu.com", //点击链接
-          details: "测试图片", //图片描述
+          linkUrl:"https://www.baidu.com",
+          imgUrl:require("@/assets/img/2.svg"),
+          details:""
         },
         {
-          imgUrl: require("@/assets/img/3.jpg"), //图片地址
-          linkUrl: "https:www.baidu.com", //点击链接
-          details: "测试图片", //图片描述
+          linkUrl:"https://www.baidu.com",
+          imgUrl:require("@/assets/img/3.svg"),
+          details:""
         },
+        {
+          linkUrl:"https://www.baidu.com",
+          imgUrl:require("@/assets/img/4.svg"),
+          details:""
+        },
+        {
+          linkUrl:"https://www.baidu.com",
+          imgUrl:require("@/assets/img/5.svg"),
+          details:""
+        }
       ],
     },
     //切换图片时间
@@ -145,6 +155,7 @@ figure,
 .container {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 a,
 .button-list {
