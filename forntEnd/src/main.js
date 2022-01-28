@@ -7,8 +7,19 @@ import store from './store'
 const Vue=createApp(App)
 
 
+//ElementUI
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+Vue.use(ElementPlus);
+
+//国际化
+import setI18n from './internationalization'
+setI18n(Vue)
+
 //初始化样式
 import './assets/css/normalize.css'
+//全局样式
+import './assets/css/command.css'
 
 //工具类，挂载到vue全局
 import until from './until'

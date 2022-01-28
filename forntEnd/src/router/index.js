@@ -1,3 +1,10 @@
+/*
+ * @Description:路由地址 
+ * @Author: JunLiangWang
+ * @Date: 2022-01-20 10:45:46
+ * @LastEditors: JunLiangWang
+ * @LastEditTime: 2022-01-27 17:18:52
+ */
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [{
@@ -9,10 +16,30 @@ const routes = [{
   name: "login",
   path: "/login",
   component: () => import('../views/login/login.vue'),
-  meta: {
-    title: "登录",
-    isVerify: true
-  },
+  children:[
+    {
+        path: "",
+        redirect: '/signin'
+    },
+    {
+      //登录路由
+      name: "signin",
+      path: "/signin",
+      component: () => import('../views/login/views/sign-in.vue'),
+    },
+    {
+      //注册路由
+      name: "signup",
+      path: "/signup",
+      component: () => import('../views/login/views/sign-up.vue'),
+    },
+    {
+      //忘记密码
+      name: "forgetpassword",
+      path: "/forgetpassword",
+      component: () => import('../views/login/views/forget-password.vue'),
+    }
+  ]
 },
 ]
 
