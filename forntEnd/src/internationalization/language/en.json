@@ -1,6 +1,7 @@
 
 {
   "login": {
-    "test": "test"
+    "accountInputPlaceholder": "Please enter your account or mobile",
+    "passwordInputPlaceholder": "Please enter your password"
   }
 }

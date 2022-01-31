@@ -3,11 +3,11 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-28 10:43:47
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-28 11:40:32
+ * @LastEditTime: 2022-01-28 12:31:49
 -->
 <template>
   <el-dropdown trigger="click" @command="handleCommand">
-    <span class="lanbtn">{{ languageList[currentLanguage].displayTitle }}</span>
+    <div class="lanbtn"><span>{{ languageList[currentLanguage].displayTitle }}</span></div>
     <template #dropdown>
       <el-dropdown-menu>
       <el-dropdown-item
@@ -64,11 +64,16 @@ export default {
 
 <style scoped>
 .lanbtn {
-  cursor: pointer;
-  padding: 4px 2px;
-  border-radius: 3px;
+    cursor: pointer;
+    padding: 6px 6px;
+    border-radius: 3px;
+    font-size: 17px;
+    background: #68bd45;
+}
+.lanbtn>span{
+    color: white;
 }
 .lanbtn:hover {
-  background: #90909042;
+  background: #34495e;
 }
 </style>

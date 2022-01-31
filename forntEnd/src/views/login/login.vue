@@ -3,7 +3,7 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-20 10:58:58
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-27 16:23:20
+ * @LastEditTime: 2022-01-28 12:26:38
 -->
 <!--登录主页-->
 <template>
@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 .apn-div {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -143,7 +143,7 @@ export default {
     height: 100%;
   }
 
-  .sub-div {
+  .sub-div:nth-child(1) {
     display: none;
   }
 }
