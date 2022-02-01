@@ -4,6 +4,9 @@
     "accountInputPlaceholder": "Please enter your account or mobile",
     "passwordInputPlaceholder": "Please enter your password",
     "forgetPassword":"Forget Password",
-    "maintainLogin":"Maintain Login"
+    "maintainLogin":"Maintain Login",
+    "loginBtn":"Sign In",
+    "haveNotAccount":"Don't have an account ? ",
+    "signUp":"Sign Up"
   }
 }

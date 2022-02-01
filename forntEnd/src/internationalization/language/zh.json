@@ -3,6 +3,9 @@
     "accountInputPlaceholder": "请输入您的账户或者手机号码",
     "passwordInputPlaceholder": "请输入您的密码",
     "forgetPassword":"忘记密码",
-    "maintainLogin":"保持登录"
+    "maintainLogin":"保持登录",
+    "loginBtn":"登 录",
+    "haveNotAccount":"还没有账户？",
+    "signUp":"立即注册"
   }
 }

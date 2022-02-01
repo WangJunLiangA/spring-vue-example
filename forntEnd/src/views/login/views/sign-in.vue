@@ -3,7 +3,7 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-27 16:23:31
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-02-01 16:05:28
+ * @LastEditTime: 2022-02-01 16:46:13
 -->
 <template>
   <div class="container">
@@ -35,8 +35,20 @@
     </div>
     <!--选择框-->
     <div class="item three-container">
-      <circle-checkbox :title="language.maintainLogin" v-model="isMaintain"></circle-checkbox>
-      <a>{{language.forgetPassword}}</a>
+      <circle-checkbox
+        :title="language.maintainLogin"
+        v-model="isMaintain"
+      ></circle-checkbox>
+      <a>{{ language.forgetPassword }}</a>
+    </div>
+    <!--登录按钮-->
+    <div class="item three-container firth">
+      <div class="logbtn-div">
+        <log-btn :title="language.loginBtn"></log-btn>
+      </div>
+      <span class="loginup-span"
+        >{{ language.haveNotAccount }}<a>{{ language.signUp }}</a></span
+      >
     </div>
   </div>
 </template>
@@ -46,6 +58,7 @@ import langChangeBtn from "@/components/lang-change-btn.vue";
 import logTitle from "../componets/log-title.vue";
 import iconInput from "../componets/icon-input.vue";
 import circleCheckbox from "@/components/circle-checkbox";
+import logBtn from "../componets/log-btn.vue";
 export default {
   name: "signIn",
   components: {
@@ -53,6 +66,7 @@ export default {
     logTitle,
     iconInput,
     circleCheckbox,
+    logBtn,
   },
   data() {
     return {
@@ -82,6 +96,9 @@ export default {
         passwordInputPlaceholder: this.$t(pre + ".passwordInputPlaceholder"),
         forgetPassword: this.$t(pre + ".forgetPassword"),
         maintainLogin: this.$t(pre + ".maintainLogin"),
+        loginBtn: this.$t(pre + ".loginBtn"),
+        haveNotAccount: this.$t(pre + ".haveNotAccount"),
+        signUp: this.$t(pre + ".signUp"),
       };
     },
   },
@@ -146,13 +163,30 @@ p {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  a{
-    color:#b7bdc4;
+  a {
+    color: #b7bdc4;
     cursor: pointer;
     font-weight: normal;
   }
-  a:hover{
+  a:hover {
     color: #34495e;
+  }
+}
+.firth {
+  padding-top: 20px;
+}
+.logbtn-div {
+  height: 40px;
+  width: 40%;
+  font-size: 18px;
+}
+.loginup-span {
+  color: #c1c5cc;
+  margin-left: 20px;
+  font-weight: normal;
+  a {
+    color: #69bd46;
+    cursor: pointer;
   }
 }
 </style>
