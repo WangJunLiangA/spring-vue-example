@@ -3,7 +3,7 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-27 16:23:31
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-31 22:49:19
+ * @LastEditTime: 2022-02-01 16:05:28
 -->
 <template>
   <div class="container">
@@ -34,9 +34,9 @@
       ></icon-input>
     </div>
     <!--选择框-->
-    <div>
-      <input id="test" type="checkbox" value="测试"/>
-      <label class="test" for="test"></label>
+    <div class="item three-container">
+      <circle-checkbox :title="language.maintainLogin" v-model="isMaintain"></circle-checkbox>
+      <a>{{language.forgetPassword}}</a>
     </div>
   </div>
 </template>
@@ -45,12 +45,14 @@
 import langChangeBtn from "@/components/lang-change-btn.vue";
 import logTitle from "../componets/log-title.vue";
 import iconInput from "../componets/icon-input.vue";
+import circleCheckbox from "@/components/circle-checkbox";
 export default {
   name: "signIn",
   components: {
     langChangeBtn,
     logTitle,
     iconInput,
+    circleCheckbox,
   },
   data() {
     return {
@@ -67,7 +69,9 @@ export default {
         },
       },
       //是否大写
-      isCaps:false,
+      isCaps: false,
+      //是否保持登录
+      isMaintain: false,
     };
   },
   computed: {
@@ -76,6 +80,8 @@ export default {
       return {
         accountInputPlaceholder: this.$t(pre + ".accountInputPlaceholder"),
         passwordInputPlaceholder: this.$t(pre + ".passwordInputPlaceholder"),
+        forgetPassword: this.$t(pre + ".forgetPassword"),
+        maintainLogin: this.$t(pre + ".maintainLogin"),
       };
     },
   },
@@ -101,7 +107,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   padding: 10px;
   box-sizing: border-box;
@@ -132,23 +138,21 @@ p {
   color: #c9d0d9;
   margin-top: 0;
 }
-.test{
-  border-radius: 100%;
-  border:solid 2px #68bd45;
-  display: block;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-}
-input:checked+.test::before{
-  display: block;
-  content: "\2714";
-  text-align: center;
-  vertical-align: middle;
-  font-size: 10px;
-  color: white;
-}
-input:checked+.test{
-  background: #68bd45;
+.three-container {
+  padding-top: 0;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    color:#b7bdc4;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  a:hover{
+    color: #34495e;
+  }
 }
 </style>

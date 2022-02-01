@@ -1,6 +1,8 @@
 {
   "login": {
     "accountInputPlaceholder": "请输入您的账户或者手机号码",
-    "passwordInputPlaceholder": "请输入您的密码"
+    "passwordInputPlaceholder": "请输入您的密码",
+    "forgetPassword":"忘记密码",
+    "maintainLogin":"保持登录"
   }
 }

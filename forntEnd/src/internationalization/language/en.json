@@ -2,6 +2,8 @@
 {
   "login": {
     "accountInputPlaceholder": "Please enter your account or mobile",
-    "passwordInputPlaceholder": "Please enter your password"
+    "passwordInputPlaceholder": "Please enter your password",
+    "forgetPassword":"Forget Password",
+    "maintainLogin":"Maintain Login"
   }
 }
