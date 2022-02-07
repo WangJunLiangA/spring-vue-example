@@ -3,13 +3,13 @@
  * @Author: JunLiangWang
  * @Date: 2022-01-28 15:14:27
  * @LastEditors: JunLiangWang
- * @LastEditTime: 2022-01-31 21:58:42
+ * @LastEditTime: 2022-02-08 02:31:10
 -->
 <template>
   <div class="apn">
     <!--验证码框按钮-->
     <div v-if="isCoder" class="icon coder-div">
-      <el-button
+      <el-button v-if="!isCoderImage"
         style="width: 90%"
         size="small"
         type="primary"
@@ -18,6 +18,7 @@
         :disabled="codeBtnDisabled"
         >{{ title }}</el-button
       >
+      <img style="width: 80px;" v-if="isCoderImage" :src="verifyImageData"/>
     </div>
     <!--输入框-->
     <input
@@ -52,7 +53,7 @@ export default {
   },
   props: {
     //v-model值
-    value: {
+    modelValue: {
       type: String,
       default: "",
     },
@@ -76,6 +77,11 @@ export default {
       type: Boolean,
       default: false,
     },
+    //是否为图片验证码框
+    isCoderImage: {
+      type: Boolean,
+      default: false,
+    },
     //是否正在加载
     loading: {
       type: Boolean,
@@ -96,6 +102,12 @@ export default {
       type: Boolean,
       default: false,
     },
+    //图片数据
+    verifyImageData: {
+      type: String,
+      default: "",
+    },
+    
   },
   watch: {
     /**
@@ -104,7 +116,7 @@ export default {
      * @param {*} newValue 更改值
      * @return {*}
      */
-    value(newValue) {
+    modelValue(newValue) {
       this.cuValue = newValue;
     },
     /**
@@ -114,7 +126,7 @@ export default {
      * @return {*}
      */
     cuValue(newValue) {
-      this.$emit("input", newValue);
+      this.$emit("update:modelValue",newValue)
     },
   },
   methods: {
@@ -149,7 +161,7 @@ export default {
   data() {
     return {
       //v-model实现值
-      cuValue: this.value,
+      cuValue: this.modelValue,
       //是否为密码
       displayPassword: this.isPassword,
       //输入框类型
@@ -201,7 +213,7 @@ export default {
 
 .coder-div {
   width: 100px;
-  height: 38px;
+  height: 100%;
   right: 0;
 }
 

@@ -39,7 +39,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("Demo接口文档")
                 .description("Demo接口文档")
-                .contact(new Contact("Wangjunliang","http://localhost:8080/doc.html","2222@22.com"))
+                .contact(new Contact("Wangjunliang","http://localhost:9085/doc.html","2222@22.com"))
                 .version("1.9")
                 .build();
     }

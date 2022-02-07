@@ -1,9 +1,10 @@
 *{
     color: #34495e;
     -webkit-tap-highlight-color: transparent;
+      transition: all 0.3s ease-out;
 }
 
 /*
 引入图标库
 */
-@import url('https://at.alicdn.com/t/font_3165628_8g1qtru603x.css')
+@import url('https://at.alicdn.com/t/font_3165628_5n8c0fwemh8.css')

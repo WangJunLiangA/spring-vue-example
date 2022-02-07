@@ -48,6 +48,7 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
     @Override
     public ResponseBean login(String username, String password,String code, HttpServletRequest request) {
         String captcha=(String)request.getSession().getAttribute("captcha");
+        System.out.println(captcha);
         if(StringUtils.isEmpty(code)||!captcha.equalsIgnoreCase(code))
         {
             return ResponseBean.error("验证码输入错误，请重新输入！");

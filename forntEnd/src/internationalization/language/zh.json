@@ -6,6 +6,8 @@
     "maintainLogin":"保持登录",
     "loginBtn":"登 录",
     "haveNotAccount":"还没有账户？",
-    "signUp":"立即注册"
+    "signUp":"立即注册",
+    "signInWith":"第三方登录",
+    "verifyCode":"请输入验证码"
   }
 }

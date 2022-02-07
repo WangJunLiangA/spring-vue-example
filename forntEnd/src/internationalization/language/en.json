@@ -7,6 +7,8 @@
     "maintainLogin":"Maintain Login",
     "loginBtn":"Sign In",
     "haveNotAccount":"Don't have an account ? ",
-    "signUp":"Sign Up"
+    "signUp":"Sign Up",
+    "signInWith":"Sign In With",
+    "verifyCode":"Please enter verify code"
   }
 }

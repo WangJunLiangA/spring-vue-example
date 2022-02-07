@@ -25,6 +25,14 @@ import './assets/css/command.css'
 import until from './until'
 Vue.config.globalProperties.$until = until
 
+//网络请求，挂载到vue全局
+import netApi from './netApi/index'
+Vue.config.globalProperties.$netApi = netApi
+
+//全局挂载message弹出工具
+import msg from './until/message.js'
+Vue.config.globalProperties.$msg = msg
+
 /* 手机浏览器控制台
  npm install vconsole
 */
